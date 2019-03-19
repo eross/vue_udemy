@@ -3,7 +3,8 @@
         <h3>You may view the User Details here</h3>
         <p>Many Details</p>
         <p>User Name: {{ switchName() }}</p>
-        <button @click="resetName">Reset Name</button>
+        <button @click='resetName()'>Reset Name(event)</button>
+        <button @click='resetFn()'>Reset Name(callback)</button>
     </div>
 </template>
 
@@ -14,7 +15,8 @@
                 type: String,
                 required: true,
                 default: 'Max'
-            }
+            },
+            resetFn: Function
         },
         methods: {
             switchName() {
